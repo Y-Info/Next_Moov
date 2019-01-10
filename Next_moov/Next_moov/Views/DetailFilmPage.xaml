@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Next_moov.Views.DetailFilmPage">
+    <Grid>
+
+        <Label Text="Contact Details:" FontSize="15" HorizontalOptions="StartAndExpand" Grid.Row="0" FontAttributes="Bold"/>
+
+        <Grid x:Name="GridDetails" VerticalOptions="Center" HorizontalOptions="Center" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Titre:" HorizontalOptions="StartAndExpand" Grid.Row="0" Grid.Column="0" Margin="5" FontAttributes="Bold"/>
+            <Label Text="{Binding title}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Grid.Row="0" Grid.Column="1" TextColor="Blue"  FontAttributes="Bold"/>
+
+            <Label Text="Release date:" HorizontalOptions="StartAndExpand" Grid.Row="1" Grid.Column="0" Margin="5" FontAttributes="Bold"/>
+            <Label Text="{Binding release_date}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Grid.Row="1" Grid.Column="1" TextColor="Red"  FontAttributes="Bold"/>
+
+
+            <Label Text="Vote count:" HorizontalOptions="StartAndExpand" Grid.Row="2" Grid.Column="0" Margin="5" FontAttributes="Bold"/>
+            <Label Text="{Binding vote_count}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Grid.Row="2" Grid.Column="1" TextColor="Orange"  FontAttributes="Bold"/>
+            <Label Text="Vote average:" HorizontalOptions="StartAndExpand" Grid.Row="3" Grid.Column="0" Margin="5" FontAttributes="Bold"/>
+            <Label Text="{Binding vote_average}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Grid.Row="3" Grid.Column="1" TextColor="Orange"  FontAttributes="Bold"/>
+            <Label Text="popularity:" HorizontalOptions="StartAndExpand" Grid.Row="4" Grid.Column="0" Margin="5" FontAttributes="Bold"/>
+            <Label Text="{Binding popularity}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Grid.Row="4" Grid.Column="1" TextColor="Orange"  FontAttributes="Bold"/>
+
+            <Label Text="Poster img:" HorizontalOptions="StartAndExpand" Grid.Row="5" Grid.Column="0" Margin="5" FontAttributes="Bold"/>
+            <Image Source="{Binding FullPathPoster}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Grid.Row="5" Grid.Column="1"/>
+
+
+        </Grid>
+    </Grid>
+</ContentPage>
