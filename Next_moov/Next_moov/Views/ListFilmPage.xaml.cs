@@ -23,6 +23,7 @@ namespace Next_moov.Views
 
             GetJSON();
         }
+
         public async void GetJSON()
         {
             //Check network status 
@@ -39,7 +40,7 @@ namespace Next_moov.Views
                     ObjContactList = JsonConvert.DeserializeObject<FilmList>(contactsJson);
                 }
                 //Binding listview with server response  
-                listviewConacts.ItemsSource = ObjContactList.Results;
+                listviewFilms.ItemsSource = ObjContactList.Results;
             }
             else
             {
@@ -49,7 +50,7 @@ namespace Next_moov.Views
             ProgressLoader.IsVisible = false;
         }
 
-        private void listviewContacts_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private void listviewFilms_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var itemSelectedData = e.SelectedItem as Result;
             Navigation.PushAsync(new DetailFilmPage(itemSelectedData));

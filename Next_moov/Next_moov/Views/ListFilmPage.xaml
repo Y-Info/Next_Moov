@@ -9,7 +9,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <ListView x:Name="listviewConacts" Grid.Row="1" HorizontalOptions="FillAndExpand" HasUnevenRows="True" ItemSelected="listviewContacts_ItemSelected">
+            <ListView x:Name="listviewFilms" Grid.Row="1" HorizontalOptions="FillAndExpand" HasUnevenRows="True" ItemSelected="listviewFilms_ItemSelected" IsPullToRefreshEnabled="True" IsRefreshing="{Binding IsBusy, Mode=OneWay}" RefreshCommand="{Binding RefreshFilmsCommand}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

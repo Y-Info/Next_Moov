@@ -6,6 +6,7 @@ using Next_moov.Models;
 using Next_moov.DAL;
 
 using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace Next_moov.ViewModels
 {
@@ -14,6 +15,9 @@ namespace Next_moov.ViewModels
         public ListFilmPageViewModel()
         {
             Titre = "Next Moov";
+            RefreshFilmsCommand = new Command(
+                async () => await ExecuteRefreshFilmsCommand());
+            RefreshFilmsCommand.Execute(null);
         }
 
         #region Bindable Properties
@@ -46,6 +50,20 @@ namespace Next_moov.ViewModels
                 selectedfilm = value;
                 OnPropertyChanged();
             }
+        }
+
+        #endregion
+
+        #region Bindable Commands
+
+        public Command RefreshFilmsCommand { get; set; }
+
+        private async Task ExecuteRefreshFilmsCommand()
+        {
+            IsBusy = true;
+            //si on est en ligne
+
+            IsBusy = false;
         }
 
         #endregion
