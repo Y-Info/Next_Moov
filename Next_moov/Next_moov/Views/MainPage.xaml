@@ -6,10 +6,11 @@
              Title="Next Moov">
 
     <Grid>
-
-        <Label Text="You can now access the next movie release !" FontSize="25" FontAttributes="Bold" />
+        <Image Source="http://vignette.wikia.nocookie.net/wowwiki/images/6/69/Lothar-from-Warcraftmovie_Tumblr-cropped.jpg"
+               Scale="1.5"
+               />
         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-            <Button Text="Go !" Margin="20" Clicked="BtnJson_Click"/>
+            <Button Text="Go !" Margin="10" Clicked="BtnJson_Click" BorderColor="Aqua" BorderRadius="4" BorderWidth="1" BackgroundColor="White" TextColor="Black" />
         </StackLayout>
     </Grid>
 
