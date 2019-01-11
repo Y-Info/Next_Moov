@@ -1,4 +1,5 @@
 ﻿using Next_moov.Models;
+using Next_moov.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +14,12 @@ namespace Next_moov.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetailFilmPage : ContentPage
     {
-        public DetailFilmPage(results SelectedContact)
+        public DetailFilmPage(Result SelectedFilm)
         {
             InitializeComponent();
+            BindingContext = new DetailFilmPageViewModel(SelectedFilm);
 
-            GridDetails.BindingContext = SelectedContact;
+            GridDetails.BindingContext = SelectedFilm;
         }
     }
 }

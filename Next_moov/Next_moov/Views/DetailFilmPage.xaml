@@ -1,11 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Next_moov.Views.DetailFilmPage">
+             x:Class="Next_moov.Views.DetailFilmPage"
+             Title="{Binding Titre}">
     <Grid>
-
-        <Label Text="Contact Details:" FontSize="15" HorizontalOptions="StartAndExpand" Grid.Row="0" FontAttributes="Bold"/>
-
         <Grid x:Name="GridDetails" VerticalOptions="Center" HorizontalOptions="Center" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>

@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Next_moov.Models;
+using Next_moov.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,9 @@ namespace Next_moov.Views
 		public ListFilmPage()
 		{
             InitializeComponent();
+
+            BindingContext = new ListFilmPageViewModel();
+
             GetJSON();
         }
         public async void GetJSON()
@@ -28,11 +32,11 @@ namespace Next_moov.Views
                 var client = new System.Net.Http.HttpClient();
                 var response = await client.GetAsync("https://api.themoviedb.org/3/movie/upcoming?api_key=440d3555391bf8ebbceae19005baea22&language=fr-FR&page=1");
                 string contactsJson = response.Content.ReadAsStringAsync().Result;
-                ContactList ObjContactList = new ContactList();
+                FilmList ObjContactList = new FilmList();
                 if (contactsJson != "")
                 {
                     //Converting JSON Array Objects into generic list
-                    ObjContactList = JsonConvert.DeserializeObject<ContactList>(contactsJson);
+                    ObjContactList = JsonConvert.DeserializeObject<FilmList>(contactsJson);
                 }
                 //Binding listview with server response  
                 listviewConacts.ItemsSource = ObjContactList.Results;
@@ -47,7 +51,7 @@ namespace Next_moov.Views
 
         private void listviewContacts_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var itemSelectedData = e.SelectedItem as results;
+            var itemSelectedData = e.SelectedItem as Result;
             Navigation.PushAsync(new DetailFilmPage(itemSelectedData));
         }
     }

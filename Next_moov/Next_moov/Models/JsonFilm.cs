@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Next_moov.Models
 {
-    public class results
+    public class Result
     {
         public string vote_count { get; set; }
         public string vote_average { get; set; }
@@ -21,8 +21,8 @@ namespace Next_moov.Models
         public string FullPathBG => string.Format("{0}{1}", statik, backdrop_path);
     }
 
-    public class ContactList
+    public class FilmList
     {
-        public List<results> Results { get; set; }
+        public List<Result> Results { get; set; }
     }
 }
