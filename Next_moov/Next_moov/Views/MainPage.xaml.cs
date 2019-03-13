@@ -1,4 +1,5 @@
-﻿using Next_moov.Views;
+﻿using Microsoft.AppCenter.Analytics;
+using Next_moov.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace Next_moov
         private void BtnJson_Click(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ListFilmPage());
+            Analytics.TrackEvent("Click_home_button");
         }
     }
 }
