@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Next_moov.Views;
 
+
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Next_moov
 {

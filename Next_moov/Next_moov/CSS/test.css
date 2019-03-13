@@ -1,11 +1,11 @@
 .buttonGo {
-    color: white;
-    background-color: black;
     width: 100;
     border: solid;
-    border-bottom-width: 1;
-    border-color: aqua;
-    border-radius: 4;
     bottom: 10;
-
+    background-color: white;
+    border-color: Aqua;
+    margin: 10;
+    border-radius:4;
+    border-width:1;
+    color: black;
 }

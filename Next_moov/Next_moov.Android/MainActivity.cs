@@ -6,6 +6,12 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace Next_moov.Droid
 {
@@ -14,6 +20,10 @@ namespace Next_moov.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            AppCenter.Start("c284712d-8655-4acf-9025-4587e36190a6",
+                   typeof(Analytics), typeof(Crashes));
+            AppCenter.Start("c284712d-8655-4acf-9025-4587e36190a6", typeof(Analytics), typeof(Crashes));
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 

@@ -10,7 +10,7 @@
                Scale="1.5"
                />
         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-            <Button Text="Go !" Margin="10" Clicked="BtnJson_Click" BorderColor="Aqua" BorderRadius="4" BorderWidth="1" BackgroundColor="White" TextColor="Black" />
+            <Button  StyleClass="buttonGo" Text="Go !" Clicked="BtnJson_Click" />
         </StackLayout>
     </Grid>
 
