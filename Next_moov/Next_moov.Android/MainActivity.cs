@@ -15,7 +15,7 @@ using Microsoft.AppCenter.Crashes;
 
 namespace Next_moov.Droid
 {
-    [Activity(Label = "Next_moov", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Next Moov", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
